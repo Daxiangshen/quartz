@@ -2,7 +2,9 @@ package com.quartz.medium;
 
 import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
-
+/**
+ * JobDetail是任务的定义。而job是任务的执行逻辑
+ * */
 public class CronScheduler {
     public static void main(String[] args) throws SchedulerException,InterruptedException {
         //jobDetail
@@ -21,7 +23,4 @@ public class CronScheduler {
         scheduler.start();
         scheduler.scheduleJob(jobDetail,cronTrigger);
     }
-    /**
-     * JobDetail是任务的定义。而job是任务的执行逻辑
-     * */
 }
